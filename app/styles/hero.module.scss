@@ -1,0 +1,97 @@
+@use "app/styles/common.module.scss" as *;
+@forward "app/styles/common.module.scss";
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    padding: 0 5%;
+    position: relative;
+
+    &::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: $cOrange;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -998;
+    }
+
+    &__logo {
+        width: 150px;
+        height: 50px;
+        position: fixed;
+        top: 3%;
+        left: 5%;
+    }
+
+    &__image {
+        width: 100vw;
+        height: 70vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -100;
+
+        &__item {
+            object-position: left;
+        }
+    }
+
+    &__inner {
+        width: 100%;
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+        z-index: 1;
+
+        @include mq(md) {
+            display: flex;
+            align-items: end;
+        }
+
+        &__title {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            flex: 1;
+
+            & h1{
+                @extend .font-xl;
+                color: white;
+                line-height: 1.1;
+                // @extend .mb-sm;
+
+                @include mq(md){
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &__headline {
+            @extend .font-md;
+            color: white;
+        }
+    }
+
+    &__salada{
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        bottom: 0;
+        right: -10%;
+
+        &__item{
+            filter: drop-shadow(5px 5px 5px #333333);
+        }
+    }
+
+    &__bg{
+        position: absolute;
+        top: 60%;
+        left: 0;
+        width: 100vw;
+        height: 100px;
+    }
+
+
+}

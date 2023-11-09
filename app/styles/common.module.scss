@@ -1,0 +1,64 @@
+@use "app/styles/_mq.scss" as *;
+@forward "app/styles/_mq.scss";
+/////////////////////////////////
+//container
+/////////////////////////////////
+
+
+/////////////////////////////////////
+//　color
+/////////////////////////////////////
+$cBlack: #333333;
+$cGreen: #839C96;
+$cOrange: #E1B58B;
+$cBcc: #F4F2E0;
+$cBlue: #AACBD0;
+
+/////////////////////////////////
+//margin bottom
+/////////////////////////////////
+.mb-sm{
+    margin-bottom: 30px;
+}
+.mb-md{
+    margin-bottom: 50px;
+}
+.mb-lg{
+    margin-bottom: 100px;
+}
+.mb-xl{
+    margin-bottom: 150px;
+}
+
+
+/////////////////////////////////
+//font size
+/////////////////////////////////
+.font-sm{
+    font-size: 10px;
+
+    @include mq(lg){
+        font-size: 12px;
+    }
+}
+.font-md{
+    font-size: 14px;
+
+    @include mq(xl){
+        font-size: 16px;
+    }
+}
+.font-lg{
+    font-size: 24px;
+
+    @include mq(xl){
+        font-size: 30px;
+    }
+}
+.font-xl{
+    font-size: 60px;
+
+    @include mq(xl){
+        font-size: 30px;
+    }
+}
