@@ -15,7 +15,7 @@ const Noto = Noto_Sans({
 })
 const NotoJP = Noto_Sans_JP({
   subsets: ["latin"],
-  weight: ["400", "800"],
+  weight: ["300", "800"],
   display: "swap"
 })
 const NotoNum = Noto_Nastaliq_Urdu({

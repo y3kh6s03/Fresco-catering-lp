@@ -1,0 +1,62 @@
+@use "app/styles/common.module.scss" as *;
+
+.catering {
+    display: flex;
+    justify-content: space-between;
+    margin-left: calc(50% - 50vw);
+
+    &__image {
+        position: relative;
+
+        &:nth-of-type(1){
+            flex: 2;
+            margin-right: -20%;
+            height: 130px;
+
+            @include mq(md){
+                max-width: 350px;
+                height: calc(200px + 1vw);
+            }
+            @include mq(lg){
+                margin-right: -10%;
+                max-width: 400px;
+            }
+        }
+        &:nth-of-type(2){
+            flex: 3;
+            height: 200px;
+            margin-top: 20%;
+
+            @include mq(md){
+                max-width: 500px;
+                height: calc(200px + 7vw);
+            }
+            @include mq(lg){
+                margin-top: 10%;
+                max-width: 600px;
+                height: calc(200px + 10vw);
+            }
+        }
+
+        & img {}
+    }
+
+
+    &__headline {
+        flex: 1;
+        & h3 {
+            color: white;
+            @extend .font-lg;
+            writing-mode: vertical-rl;
+            text-align: start;
+            margin-left: 30%;
+            white-space: nowrap;
+            line-height: 2;
+
+            @include mq(lg){
+                margin-left: 40%;
+            }
+        }
+
+    }
+}
