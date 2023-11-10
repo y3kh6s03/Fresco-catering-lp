@@ -78,6 +78,9 @@ $cBlue: #AACBD0;
 .font-xl{
     font-size: 60px;
 
+    @include mq(md){
+        font-size: 80px;
+    }
     @include mq(xl){
         font-size: 80px;
     }

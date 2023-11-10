@@ -8,31 +8,34 @@
     &__image {
         position: relative;
 
-        &:nth-of-type(1){
+        &:nth-of-type(1) {
             flex: 2;
             margin-right: -20%;
             height: 130px;
 
-            @include mq(md){
+            @include mq(md) {
                 max-width: 350px;
                 height: calc(200px + 1vw);
             }
-            @include mq(lg){
+
+            @include mq(lg) {
                 margin-right: -10%;
                 max-width: 400px;
             }
         }
-        &:nth-of-type(2){
+
+        &:nth-of-type(2) {
             flex: 3;
             height: 200px;
             margin-top: 20%;
 
-            @include mq(md){
+            @include mq(md) {
+                margin-top: 10%;
                 max-width: 500px;
                 height: calc(200px + 7vw);
             }
-            @include mq(lg){
-                margin-top: 10%;
+
+            @include mq(lg) {
                 max-width: 600px;
                 height: calc(200px + 10vw);
             }
@@ -44,6 +47,7 @@
 
     &__headline {
         flex: 1;
+
         & h3 {
             color: white;
             @extend .font-lg;
@@ -53,7 +57,7 @@
             white-space: nowrap;
             line-height: 2;
 
-            @include mq(lg){
+            @include mq(lg) {
                 margin-left: 40%;
             }
         }

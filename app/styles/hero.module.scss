@@ -6,11 +6,12 @@
     height: 100vh;
     padding: 0 5%;
     position: relative;
+    margin-bottom: 20vh;
 
-    &::before{
+    &::before {
         content: "";
         width: 100%;
-        height: 100%;
+        height: 130vh;
         background-color: $cOrange;
         position: absolute;
         top: 0;
@@ -19,8 +20,8 @@
     }
 
     &__logo {
-        width: 150px;
-        height: 50px;
+        width: 200px;
+        height: 60px;
         position: fixed;
         top: 3%;
         left: 5%;
@@ -28,7 +29,7 @@
 
     &__image {
         width: 100vw;
-        height: 70vh;
+        height: 80vh;
         position: absolute;
         top: 0;
         right: 0;
@@ -40,7 +41,7 @@
     }
 
     &__inner {
-        width: 100%;
+        width: 90%;
         position: absolute;
         top: 60%;
         transform: translateY(-50%);
@@ -55,13 +56,13 @@
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             flex: 1;
 
-            & h1{
+            & h1 {
                 @extend .font-xl;
                 color: white;
-                line-height: 1.1;
+                line-height: 1;
                 // @extend .mb-sm;
 
-                @include mq(md){
+                @include mq(md) {
                     margin-bottom: 0;
                 }
             }
@@ -69,28 +70,404 @@
 
         &__headline {
             @extend .font-md;
+            font-weight: bold;
             color: white;
         }
     }
 
-    &__salada{
-        width: 200px;
-        height: 200px;
+    &__bbq {
+        width: 100px;
+        height: 100px;
         position: absolute;
-        bottom: 0;
-        right: -10%;
+        bottom: 0%;
+        left: 0%;
+        z-index: 100;
 
-        &__item{
-            filter: drop-shadow(5px 5px 5px #333333);
+        animation: bbq 1s infinite;
+
+        @keyframes bbq {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            10% {
+                transform: rotate(2deg);
+            }
+
+            20% {
+                transform: rotate(-3deg);
+            }
+
+            30% {
+                transform: rotate(1deg);
+            }
+
+            40% {
+                transform: rotate(-1deg);
+            }
+
+            50% {
+                transform: rotate(3deg);
+            }
+
+            60% {
+                transform: rotate(0deg);
+            }
+
+            70% {
+                transform: rotate(1deg);
+            }
+
+            80% {
+                transform: rotate(-2deg);
+            }
+
+            90% {
+                transform: rotate(2deg);
+            }
+
+            100% {
+                transform: rotate(-1deg);
+            }
         }
     }
 
-    &__bg{
+    &__egg {
+        width: 100px;
+        height: 60px;
         position: absolute;
-        top: 60%;
+        bottom: 0%;
+        left: 0%;
+        z-index: 100;
+        transform: translate(200px, 50px);
+        animation: egg 3s infinite;
+
+        @keyframes egg {
+            0% {
+                transform: translate(200px, 50px) rotate(0deg);
+            }
+
+            10% {
+                transform: translate(200px, 50px) rotate(2deg);
+            }
+
+            20% {
+                transform: translate(200px, 50px) rotate(-3deg);
+            }
+
+            30% {
+                transform: translate(200px, 50px) rotate(4deg);
+            }
+
+            40% {
+                transform: translate(200px, 50px) rotate(-1deg);
+            }
+
+            50% {
+                transform: translate(200px, 50px) rotate(7deg);
+            }
+
+            60% {
+                transform: translate(200px, 50px) rotate(0deg);
+            }
+
+            70% {
+                transform: translate(200px, 50px) rotate(2deg);
+            }
+
+            80% {
+                transform: translate(200px, 50px) rotate(-2deg);
+            }
+
+            90% {
+                transform: translate(200px, 50px) rotate(7deg);
+            }
+
+            100% {
+                transform: translate(200px, 50px) rotate(0deg);
+            }
+        }
+    }
+
+    &__nabe {
+        width: 100px;
+        height: 40px;
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        z-index: 100;
+        transform: translate(250px, -50px);
+        animation: nabe 5s 1s infinite;
+
+        @keyframes nabe {
+            0% {
+                transform: translate(250px, -50px) rotate(0deg);
+            }
+
+            10% {
+                transform: translate(250px, -50px) rotate(2deg);
+            }
+
+            20% {
+                transform: translate(250px, -50px) rotate(-3deg);
+            }
+
+            30% {
+                transform: translate(250px, -50px) rotate(4deg);
+            }
+
+            40% {
+                transform: translate(250px, -50px) rotate(-1deg);
+            }
+
+            50% {
+                transform: translate(250px, -50px) rotate(7deg);
+            }
+
+            60% {
+                transform: translate(250px, -50px) rotate(0deg);
+            }
+
+            70% {
+                transform: translate(250px, -50px) rotate(2deg);
+            }
+
+            80% {
+                transform: translate(250px, -50px) rotate(-2deg);
+            }
+
+            90% {
+                transform: translate(250px, -50px) rotate(7deg);
+            }
+
+            100% {
+                transform: translate(250px, -50px) rotate(0deg);
+            }
+        }
+    }
+
+    &__meet {
+        width: 100px;
+        height: 120px;
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        z-index: 100;
+        transform: translate(450px, -10px);
+        animation: meet 25s ease-in-out infinite;
+
+        @keyframes meet {
+
+            0%,
+            20%,
+            40%,
+            60%,
+            80%,
+            100% {
+                transform: translate(450px, -10px);
+            }
+
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: translate(450px, 10px);
+            }
+        }
+
+    }
+
+    &__rice {
+        width: 100px;
+        height: 120px;
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        z-index: 100;
+        transform: translate(650px, 80px);
+        animation: rice 2s ease-in-out infinite;
+
+        @keyframes rice {
+
+            0%,
+            5%,
+            10%,
+            15%,
+            20%,
+            25%,
+            30% {
+                transform: translate(650px, 80px) rotate(1deg);
+            }
+
+            2%,
+            7%,
+            12%,
+            17%,
+            22%,
+            27%,
+            32% {
+                transform: translate(650px, 80px) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(650px, 80px) rotate(1deg);
+            }
+        }
+
+    }
+
+    &__stick {
+        width: 100px;
+        height: 110px;
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        z-index: 100;
+        transform: translate(850px, 45px);
+        animation: stick 2s ease-in-out infinite;
+
+        @keyframes stick {
+
+            0%,
+            20%,
+            60% {
+                transform: translate(850px, 45px) rotate(10deg);
+            }
+
+            10%,
+            50%,
+            70% {
+                transform: translate(850px, 45px) rotate(-10deg);
+            }
+
+            30%,
+            40%,
+            80%,
+            90%,
+            100% {
+                transform: translate(850px, 45px) rotate(0deg);
+            }
+        }
+    }
+
+    &__fire {
+        width: 100px;
+        height: 110px;
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        z-index: 100;
+        transform: translate(1050px, 85px);
+        animation: fire 3s infinite;
+
+        @keyframes fire {
+            0% {
+                transform: translate(1050px, 85px);
+            }
+
+            10% {
+                transform: translate(1050px, 65px);
+            }
+
+            20% {
+                transform: translate(1050px, 65px) rotate(-3deg);
+            }
+
+            30% {
+                transform: translate(1050px, 65px) rotate(4deg);
+            }
+
+            40% {
+                transform: translate(1050px, 65px) rotate(-1deg);
+            }
+
+            50% {
+                transform: translate(1050px, 85px);
+            }
+
+            60% {
+                transform: translate(1050px, 85px);
+            }
+
+            70% {
+                transform: translate(1050px, 65px) rotate(-2deg);
+            }
+
+            80% {
+                transform: translate(1050px, 65px) rotate(7deg);
+            }
+
+            90% {
+                transform: translate(1050px, 65px) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(1050px, 85px) rotate(2deg);
+            }
+        }
+
+    }
+
+    &__cup {
+        width: 100px;
+        height: 110px;
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        z-index: 100;
+        transform: translate(1150px, -65px);
+        animation: cup 25s ease-in-out infinite;
+
+        @keyframes cup {
+
+            0%,
+            20%,
+            40%,
+            60%,
+            80%,
+            100% {
+                transform: translate(1150px, -10px);
+            }
+
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: translate(1150px, 10px);
+            }
+        }
+    }
+
+    &__coffee {
+        width: 100px;
+        height: 110px;
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        z-index: 100;
+        transform: translate(1250px, 65px);
+    }
+
+    &__bg {
+        position: absolute;
+        bottom: 0;
         left: 0;
         width: 100vw;
-        height: 100px;
+        height: 50vh;
+
+        @include mq(md) {
+            bottom: -10vh;
+        }
+
+        @include mq(lg) {
+            bottom: -15vh;
+        }
+
+        @include mq(xl) {
+            bottom: -20vh;
+        }
     }
 
 

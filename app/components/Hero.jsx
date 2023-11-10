@@ -34,8 +34,32 @@ export const Hero = () => {
                 </p>
             </div>
 
-            <div className={styles.hero__salada}>
-                <Image className={styles.hero__salada__item} src={"/images/salada-plate.png"} fill sizes="100%" style={{objectFit: "cover"}} alt="salada"/>
+            <div className={styles.hero__bbq}>
+                <Image className={styles.hero__bbq__item} src={"/svg/bbq.svg"} fill sizes="100%" style={{objectFit: "contain"}} alt="salada"/>
+            </div>
+            <div className={styles.hero__egg}>
+                <Image className={styles.hero__egg__item} src={"/svg/egg.svg"} fill sizes="100%" style={{objectFit: "contain"}} alt="salada"/>
+            </div>
+            <div className={styles.hero__nabe}>
+                <Image className={styles.hero__nabe__item} src={"/svg/nabe.svg"} fill sizes="100%" style={{objectFit: "contain"}} alt="salada"/>
+            </div>
+            <div className={styles.hero__meet}>
+                <Image className={styles.hero__meet__item} src={"/svg/meet.svg"} fill sizes="100%" style={{objectFit: "contain"}} alt="salada"/>
+            </div>
+            <div className={styles.hero__rice}>
+                <Image className={styles.hero__rice__item} src={"/svg/rice.svg"} fill sizes="100%" style={{objectFit: "contain"}} alt="salada"/>
+            </div>
+            <div className={styles.hero__stick}>
+                <Image className={styles.hero__stick__item} src={"/svg/stick.svg"} fill sizes="100%" style={{objectFit: "contain"}} alt="salada"/>
+            </div>
+            <div className={styles.hero__fire}>
+                <Image className={styles.hero__fire__item} src={"/svg/fire.svg"} fill sizes="100%" style={{objectFit: "contain"}} alt="salada"/>
+            </div>
+            <div className={styles.hero__cup}>
+                <Image className={styles.hero__cup__item} src={"/svg/cup.svg"} fill sizes="100%" style={{objectFit: "contain"}} alt="salada"/>
+            </div>
+            <div className={styles.hero__coffee}>
+                <Image className={styles.hero__coffee__item} src={"/svg/coffee.svg"} fill sizes="100%" style={{objectFit: "contain"}} alt="salada"/>
             </div>
 
             <div className={styles.hero__bg}>
