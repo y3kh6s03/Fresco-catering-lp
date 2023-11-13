@@ -452,22 +452,14 @@
 
     &__bg {
         position: absolute;
-        bottom: 0;
-        left: 0;
+        top: calc(80vh - 110vw / 13.2);
+        // bottom: calc(120px - 15vh);
+        left: 50%;
         width: 100vw;
-        height: 50vh;
-
-        @include mq(md) {
-            bottom: -10vh;
-        }
-
-        @include mq(lg) {
-            bottom: -15vh;
-        }
-
-        @include mq(xl) {
-            bottom: -20vh;
-        }
+        // max-width: 1600px;
+        // aspect-ratio: 1 / 12.8;
+        height: calc(110vw / 12);
+        transform: translateX(-50%);
     }
 
 

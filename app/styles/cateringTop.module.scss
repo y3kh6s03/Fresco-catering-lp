@@ -18,15 +18,19 @@
             }
 
             & span {
+                display: block;
                 @extend .font-xxl;
-                line-height: 1;
+                @extend .mb-lg;
+                line-height: .1;
             }
         }
 
         &__image {
             flex: 1;
             width: 250px;
+            max-width: 700px;
             height: 230px;
+            max-height: 648px;
             position: absolute;
             top: 0;
             right: -5%;

@@ -6,7 +6,8 @@ import { Noto_Sans, Noto_Nastaliq_Urdu } from "next/font/google";
 
 import { Hero } from "@/app/components/Hero";
 import { Catering } from "@/app/components/Catering";
-import { Bento } from "@/app/components/Bento";
+import cateringContents from "app/JSON/cateringContents.json";
+import { Staff } from "@/app/components/staff";
 
 const Noto = Noto_Sans({
   subsets: ["latin"],
@@ -18,20 +19,24 @@ const NotoNum = Noto_Nastaliq_Urdu({
   weight: ["700"],
   display: "swap"
 })
-export const UserFont = createContext();
+export const UseFont = createContext();
 const Fonts = {
   Noto,
   NotoNum
 }
 
+export const UseContents = createContext();
+
 export default function Home() {
   return (
     <>
       <Hero />
-      <UserFont.Provider value={Fonts}>
-        <Catering />
-        <Bento/>
-      </UserFont.Provider>
+      <UseContents.Provider value={cateringContents}>
+        <UseFont.Provider value={Fonts}>
+          <Catering />
+        </UseFont.Provider>
+      </UseContents.Provider>
+      <Staff/>
     </>
   )
 }

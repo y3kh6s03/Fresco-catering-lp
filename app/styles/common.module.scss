@@ -4,7 +4,7 @@
 //　color
 /////////////////////////////////////
 $cBlack: #333333;
-$cGreen: #839C96;
+$cGreen: #95b7af;
 $cOrange: #E1B58B;
 $cBcc: #F4F2E0;
 $cBlue: #AACBD0;
@@ -14,21 +14,11 @@ $cBlue: #AACBD0;
 /////////////////////////////////
 
 .container{
-    margin: 0 5%;
+    width: 100vw;
+    padding: 0 5%;
+    margin: 0 auto;
     position: relative;
-}
-
-.catering{
-    &::before{
-        content: "";
-        width: 110vw;
-        height: 100%;
-        background-color: $cOrange;
-        position: absolute;
-        top: 0;
-        left: -5vw;
-        z-index: -998;
-    }
+    max-width: 1440px;
 }
 
 /////////////////////////////////

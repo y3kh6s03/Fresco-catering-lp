@@ -1,0 +1,50 @@
+@use "app/styles/common.module.scss" as *;
+
+.catering{
+
+    &:nth-of-type(2){
+
+        &::before{
+            content: "";
+            width: 110vw;
+            height: 100%;
+            background-color: $cOrange;
+            position: absolute;
+            top: 0;
+            left: calc(50% - 50vw);
+            z-index: -998;
+        }
+    }
+
+
+    &:nth-of-type(3){
+        &::before{
+            content: "";
+            width: 110vw;
+            height: 100%;
+            background-color: $cGreen;
+            position: absolute;
+            top: 0;
+            left: calc(50% - 50vw);
+            z-index: -998;
+        }
+        &::after{
+            content: "";
+            width: 110vw;
+            max-width: 1600px;
+            height: 300px;
+            background-image: url(/svg/bg-green.svg);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: calc(0px - 20vw);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -998;
+
+            @include mq(xxl){
+                top: -290px;
+            }
+        }
+    }
+}
+
