@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -16,6 +16,6 @@ body:after {
     height: 100%;
     /*画面全体を覆う*/
     content: "";
-    background: #F4F2E0;
-    background: linear-gradient(326deg, rgba(255, 245, 226, 1) 33%, rgba(255, 255, 255, 1) 76%, rgba(255, 255, 255, 1) 100%);
+    background: rgb(244,242,224);
+    // background: linear-gradient(180deg, rgba(242,239,217,1) 40%, rgba(255,255,255,1) 100%);
 }
