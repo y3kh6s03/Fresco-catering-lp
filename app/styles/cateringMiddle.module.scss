@@ -53,9 +53,13 @@
             @extend .font-lg;
             writing-mode: vertical-rl;
             text-align: start;
-            margin-left: 30%;
+            margin-left: 10%;
             white-space: nowrap;
             line-height: 2;
+
+            @include mq(md) {
+                margin-left: 20%;
+            }
 
             @include mq(lg) {
                 margin-left: 40%;

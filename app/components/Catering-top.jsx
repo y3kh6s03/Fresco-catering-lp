@@ -2,13 +2,17 @@
 
 import Image from "next/image";
 import { useContext } from "react";
+import { motion } from "framer-motion";
 
 import styles from "app/styles/cateringTop.module.scss";
 import { UseFont } from "@/app/page";
 
 
 export const CateringTop = ({ item }) => {
+
     const { Noto, NotoNum } = useContext(UseFont);
+    const copyTexts = item.copy;
+
     return (
         <>
             <div className={styles.catering__hero}>
@@ -37,9 +41,13 @@ export const CateringTop = ({ item }) => {
 
             <div className={styles.catering__inner}>
                 <div className={styles.catering__inner__headline}>
-                    <h3>
-                        {item.copy}
-                    </h3>
+                    {copyTexts.split("\n").map((text, index) => {
+                        return (
+                            <h3 key={index}>
+                                {text} <br />
+                            </h3>
+                        )
+                    })}
                 </div>
                 <div className={styles.catering__inner__description}>
                     <p>

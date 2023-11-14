@@ -12,6 +12,10 @@
             margin-top: 20%;
             margin-left: 50%;
         }
+        @include mq(lg){
+            margin-top: 30%;
+            margin-left: 50%;
+        }
 
         & span{
             display: block;
@@ -46,6 +50,7 @@
         &__image {
             position: relative;
             width: 70vw;
+            max-width: 650px;
             height: 250px;
             margin-left: calc(50% - 40vw);
             left: 30vw;
@@ -53,6 +58,9 @@
             @include mq(md){
                 flex: 1;
                 left: 0;
+            }
+            @include mq(xl){
+                height: 350px;
             }
 
             & img {

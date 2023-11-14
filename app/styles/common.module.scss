@@ -66,13 +66,19 @@ $cBlue: #AACBD0;
     }
 }
 .font-xl{
-    font-size: 60px;
+    font-size: 72px;
 
-    @include mq(md){
+    @include mq(sm){
         font-size: 80px;
     }
+    @include mq(md){
+        font-size: 92px;
+    }
+    @include mq(lg){
+        font-size: 108px;
+    }
     @include mq(xl){
-        font-size: 80px;
+        font-size: 150px;
     }
 }
 .font-xxl{
