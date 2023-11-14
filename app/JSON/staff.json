@@ -1,5 +1,6 @@
 [
     {
+        "num": "01",
         "image": "/images/kobayashi.jpg",
         "occupation": "料理人",
         "name": "小林 賢一",
@@ -12,6 +13,7 @@
         "description3": "食材の仕入れも自ら行い、それぞれの特徴を活かした調理が得意です。食材が持つ美味しさを最大限に引き出します。"
     },
     {
+        "num": "02",
         "image": "/images/shiraishi.jpg",
         "occupation": "管理栄養士",
         "name": "白石 芽依",

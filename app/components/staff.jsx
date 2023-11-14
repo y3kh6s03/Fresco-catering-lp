@@ -1,13 +1,33 @@
 import items from "app/JSON/staff.json"
 import Image from "next/image"
+import { gsap } from "gsap/all"
 
 import styles from "app/styles/staff.module.scss"
-import { useContext } from "react"
+import { useContext, useEffect, useRef } from "react"
 import { UseFont } from "@/app/page"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 export const Staff = () => {
 
     const { Noto, NotoNum } = useContext(UseFont);
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const chefName = useRef(null)
+    const dieticianName = useRef(null)
+
+    useEffect(() => {
+        const toggleClass = (el) => {
+            ScrollTrigger.create({
+                trigger: el.current,
+                start: "top bottom",
+                toggleClass: "active"
+            })
+        }
+        toggleClass(chefName);
+        toggleClass(dieticianName);
+    }, [])
+
     return (
         <section className={styles.container}>
             <div className={styles.grass__bg}>
@@ -43,7 +63,8 @@ export const Staff = () => {
 
                             <div className={styles.staff__container}>
                                 <div className={styles.staff__container__title}>
-                                    <span className={styles.staff__container__title__span}>
+                                    <span ref={
+                                        item.num === "01" ? chefName : dieticianName} className={styles.staff__container__title__span}>
                                         {item.enName}
                                     </span>
                                     <div className={styles.staff__container__title__inner}>
