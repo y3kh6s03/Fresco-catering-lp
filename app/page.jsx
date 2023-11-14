@@ -8,6 +8,7 @@ import { Hero } from "@/app/components/Hero";
 import { Catering } from "@/app/components/Catering";
 import cateringContents from "app/JSON/cateringContents.json";
 import { Staff } from "@/app/components/staff";
+import { Contact } from "@/app/components/Contact";
 
 const Noto = Noto_Sans({
   subsets: ["latin"],
@@ -30,13 +31,14 @@ export const UseContents = createContext();
 export default function Home() {
   return (
     <>
-      <Hero />
       <UseContents.Provider value={cateringContents}>
         <UseFont.Provider value={Fonts}>
+          <Hero />
           <Catering />
+          <Staff />
+          <Contact />
         </UseFont.Provider>
       </UseContents.Provider>
-      <Staff/>
     </>
   )
 }

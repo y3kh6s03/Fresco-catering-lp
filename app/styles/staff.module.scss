@@ -1,0 +1,141 @@
+@use "app/styles/common.module.scss" as *;
+
+.grass__bg {
+    width: 120vw;
+    height: 150px !important;
+    margin-left: calc(50% - 60vw);
+    position: relative;
+    top: -120px;
+}
+
+.section__title {
+    @extend .font-xl;
+    line-height: 1;
+}
+
+.staff {
+    @extend .mb-lg;
+
+    @include mq(lg) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    & svg {
+        width: 0;
+        height: 0;
+    }
+
+    &__image {
+        position: relative;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto 50px;
+
+        @include mq(lg) {
+            flex: 1;
+        }
+
+        // @include mq(lg) {
+        // }
+
+        & img {
+            object-fit: cover;
+            object-position: 10px;
+        }
+    }
+
+    &__container {
+        position: relative;
+
+        @include mq(lg) {
+            flex: 1;
+            margin-left: calc(50% - 40vw);
+        }
+
+        &__title {
+            &__span {
+                @extend .font-xl;
+                font-weight: bold;
+                line-height: 1;
+                opacity: .1;
+                white-space: nowrap;
+                position: absolute;
+                left: 40px;
+            }
+
+            &__inner {
+                line-height: 2;
+                padding-top: 15px;
+
+                & span {
+                    position: static;
+                    opacity: 1;
+                    @extend .font-md;
+                }
+
+                & h3 {
+                    @extend .font-xl;
+                    line-height: 1;
+                    @extend .mb-md;
+                }
+            }
+        }
+
+
+
+        &__text {
+            @include mq(md) {
+                display: flex;
+                gap: 20px;
+            }
+
+            @include mq(lg) {
+                flex-direction: column;
+            }
+
+            @include mq(xl) {
+                flex-direction: row;
+            }
+
+            &__inner {
+                @extend .mb-md;
+
+                @include mq(md) {
+                    flex: 1;
+                }
+
+                & h4 {
+                    @extend .mb-sm;
+                    @extend .font-lg;
+                }
+
+                & p {
+                    @extend .font-md;
+                    ;
+
+                }
+            }
+        }
+
+
+    }
+
+    &:nth-of-type(3) {
+        & .staff__image {
+            clip-path: url(#chef);
+            aspect-ratio: 1 / 1.2;
+            max-height: 540px;
+        }
+    }
+
+    &:nth-of-type(4) {
+        & .staff__image {
+            clip-path: url(#dietician);
+            aspect-ratio: 1 / 1;
+            max-height: 450px;
+
+        }
+    }
+}
