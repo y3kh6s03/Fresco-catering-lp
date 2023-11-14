@@ -1,1 +1,95 @@
 @use "app/styles/common.module.scss" as *;
+
+.contact {
+    display: block;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: $cBlue;
+    padding: 20px;
+    border-radius: 10px;
+    @extend .mb-xl;
+
+    @include mq(sm) {
+        width: 70vw;
+    }
+    @include mq(md) {
+        width: 60vw;
+        max-width: 550px;
+    }
+    @include mq(xl) {
+        width: 40vw;
+    }
+
+    &__inner {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        position: relative;
+
+        &__jaText {
+            @extend .font-lg;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
+            transition: all .5s .3s $ease;
+        }
+
+        &__enText {
+            display: block;
+            color: white;
+            @extend .font-lg;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, calc(-50% - 100%));
+            transition: all .5s .3s $ease;
+        }
+    }
+
+    &__bar {
+        display: block;
+        width: 90%;
+        height: 1px;
+        background-color: white;
+        margin: 0 auto;
+    }
+
+    &__click {
+        display: block;
+        color: white;
+        margin-top: 10px;
+        transition: all .5s .3s $ease;
+
+    }
+
+    &:hover {
+        & .contact {
+
+            &__inner {
+
+                &__jaText {
+                    transform: translateY(-100%);
+                    transition: all .5s $ease;
+                }
+
+                &__enText {
+                    transform: translate(-50%, calc(-50%));
+                    transition: all .5s $ease;
+                }
+            }
+
+            &__click {
+                transform: translateX(100px);
+                transition: all .5s $ease;
+
+            }
+        }
+    }
+}
+
+.copy{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
