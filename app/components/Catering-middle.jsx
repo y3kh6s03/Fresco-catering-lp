@@ -10,22 +10,6 @@ export const CateringMiddle = ({ item }) => {
     const archive1 = useRef(null)
     const archive2 = useRef(null)
 
-    // const animationTarget = (dom, y) => {
-    //     const { scrollYProgress } = useScroll({
-    //         target: dom,
-    //         offset: ["start", "end"]
-    //     })
-
-    //     return (
-    //         useSpring(useTransform(scrollYProgress, [0, 1], [0, y]), {
-    //             stiffness: 100,
-    //             damping: 30,
-    //             restDelta: 0.001,
-    //         })
-    //     )
-    // }
-
-
     const archive1Animation = useScrollAnimation(archive1, 50)
     const archive2Animation = useScrollAnimation(archive2, 100)
 
