@@ -56,16 +56,32 @@ $cBlue: #AACBD0;
     }
 }
 .font-lg{
-    font-size: 20px;
+    font-size: 24px;
 
     @include mq(lg){
         font-size: 24px;
     }
     @include mq(xl){
-        font-size: 30px;
+        font-size: 32px;
     }
 }
 .font-xl{
+    font-size: 48px;
+
+    @include mq(sm){
+        font-size: 56px;
+    }
+    @include mq(md){
+        font-size: 64px;
+    }
+    @include mq(lg){
+        font-size: 72px;
+    }
+    @include mq(xl){
+        font-size: 80px;
+    }
+}
+.font-xxl{
     font-size: 72px;
 
     @include mq(sm){
@@ -81,7 +97,7 @@ $cBlue: #AACBD0;
         font-size: 150px;
     }
 }
-.font-xxl{
+.font-num{
     font-size: 200px;
 
     @include mq(xl){

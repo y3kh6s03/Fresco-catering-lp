@@ -16,6 +16,8 @@
 
 .staff {
     @extend .mb-lg;
+    width: 100%;
+    max-width: 1440px;
 
     @include mq(lg) {
         display: flex;
@@ -38,9 +40,6 @@
             flex: 1;
         }
 
-        // @include mq(lg) {
-        // }
-
         & img {
             object-fit: cover;
             object-position: 10px;
@@ -52,18 +51,25 @@
 
         @include mq(lg) {
             flex: 1;
-            margin-left: calc(50% - 40vw);
         }
 
         &__title {
             &__span {
-                @extend .font-xl;
+                @extend .font-xxl;
                 font-weight: bold;
                 line-height: 1;
                 opacity: .1;
                 white-space: nowrap;
                 position: absolute;
+                top: -0px;
                 left: 40px;
+
+                @include mq(lg){
+                    top: -30px;
+                }
+                @include mq(xl){
+                    top: -70px;
+                }
             }
 
             &__inner {
@@ -77,7 +83,7 @@
                 }
 
                 & h3 {
-                    @extend .font-lg;
+                    @extend .font-xl;
                     line-height: 1;
                     @extend .mb-md;
                 }
@@ -98,6 +104,7 @@
 
             @include mq(xl) {
                 flex-direction: row;
+                gap: 40px;
             }
 
             &__inner {
@@ -105,6 +112,9 @@
 
                 @include mq(md) {
                     flex: 1;
+                }
+                @include mq(xl) {
+                    max-width: 250px;
                 }
 
                 & h4 {
@@ -114,8 +124,6 @@
 
                 & p {
                     @extend .font-md;
-                    ;
-
                 }
             }
         }
