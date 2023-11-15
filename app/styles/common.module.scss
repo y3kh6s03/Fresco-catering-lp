@@ -50,6 +50,7 @@ $cBlue: #AACBD0;
 }
 .font-md{
     font-size: 14px;
+    line-height: 1.7;
 
     @include mq(lg){
         font-size: 16px;
@@ -109,4 +110,4 @@ $cBlue: #AACBD0;
 //ease
 /////////////////////////////////
 
-$ease: cubic-bezier(1, 0, .01, 1);
+$ease: cubic-bezier(.42,0,.13,1);

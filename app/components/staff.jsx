@@ -3,6 +3,7 @@ import Image from "next/image"
 import { gsap } from "gsap/all"
 
 import styles from "app/styles/staff.module.scss"
+import "app/styles/staff.scss"
 import { useContext, useEffect, useRef } from "react"
 import { UseFont } from "@/app/page"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -12,20 +13,25 @@ export const Staff = () => {
     const { Noto, NotoNum } = useContext(UseFont);
 
 
-    const chefName = useRef(null)
-    const dieticianName = useRef(null)
+    const chefRef = useRef(null)
+    const dieticianRef = useRef(null)
+    const cheftextRef = useRef(null)
+    const dieticiantextRef = useRef(null)
 
     useEffect(() => {
+
         gsap.registerPlugin(ScrollTrigger);
         const toggleClass = (el) => {
             ScrollTrigger.create({
                 trigger: el.current,
-                start: "top bottom",
+                start: "top 90%",
                 toggleClass: "active"
             })
         }
-        toggleClass(chefName);
-        toggleClass(dieticianName);
+        toggleClass(chefRef);
+        toggleClass(dieticianRef);
+        toggleClass(cheftextRef);
+        toggleClass(dieticiantextRef);
     }, [])
 
     return (
@@ -62,22 +68,35 @@ export const Staff = () => {
                             </div>
 
                             <div className={styles.staff__container}>
-                                <div className={styles.staff__container__title}>
-                                    <span ref={
-                                        item.num === "01" ? chefName : dieticianName} className={styles.staff__container__title__span}>
+                                <div
+                                    ref={item.num === "01"
+                                        ? chefRef
+                                        : dieticianRef}
+                                    className={styles.staff__container__title}>
+                                    <span className={`enName ${styles.staff__container__title__span}`}>
                                         {item.enName}
                                     </span>
-                                    <div className={styles.staff__container__title__inner}>
-                                        <span>{item.occupation}</span>
-                                        <h3>{item.name}</h3>
+                                    <div className={`name__container ${styles.staff__container__title__inner}`}>
+                                        <span>
+                                            {item.occupation}
+                                        </span>
+                                        <h3>
+                                            {item.name}
+                                        </h3>
                                     </div>
                                 </div>
 
-                                <div className={styles.staff__container__text}>
+                                <div
+                                    ref={item.num === "01"
+                                        ? cheftextRef
+                                        : dieticiantextRef
+                                    }
+                                    className={`${styles.staff__container__text}`}>
                                     {
                                         [1, 2, 3].map((num, index) => {
                                             return (
-                                                <div className={styles.staff__container__text__inner} key={index}>
+                                                <div
+                                                    className={`text__inner ${styles.staff__container__text__inner}`} key={index}>
                                                     <h4>
                                                         {item[`headline${num}`]}
                                                     </h4>
