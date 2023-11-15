@@ -3,30 +3,31 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 import styles from "app/styles/cateringMiddle.module.scss";
 import { useRef } from "react";
+import { useScrollAnimation } from "@/app/hooks/useScrollAnimation";
 
 export const CateringMiddle = ({ item }) => {
 
     const archive1 = useRef(null)
     const archive2 = useRef(null)
 
-    const animationTarget = (dom, y) => {
+    // const animationTarget = (dom, y) => {
+    //     const { scrollYProgress } = useScroll({
+    //         target: dom,
+    //         offset: ["start", "end"]
+    //     })
 
-        const { scrollYProgress } = useScroll({
-            target: dom,
-            offset: ["start", "end"]
-        })
+    //     return (
+    //         useSpring(useTransform(scrollYProgress, [0, 1], [0, y]), {
+    //             stiffness: 100,
+    //             damping: 30,
+    //             restDelta: 0.001,
+    //         })
+    //     )
+    // }
 
-        return (
-            useSpring(useTransform(scrollYProgress, [0, 1], [0, y]), {
-                stiffness: 100,
-                damping: 30,
-                restDelta: 0.001,
-            })
-        )
-    }
 
-    const archive1Animation = animationTarget(archive1, 50)
-    const archive2Animation = animationTarget(archive2, 100)
+    const archive1Animation = useScrollAnimation(archive1, 50)
+    const archive2Animation = useScrollAnimation(archive2, 100)
 
     return (
         <div className={styles.catering}>
