@@ -54,20 +54,24 @@
         }
 
         &__title {
+            clip-path: polygon(0 -100%, 120% -100%, 120% 105%, 0 105%);
+
             &__span {
                 @extend .font-xxl;
                 font-weight: bold;
                 line-height: 1;
-                opacity: .1;
+                opacity: 0;
                 white-space: nowrap;
                 position: absolute;
                 top: -0px;
                 left: 40px;
+                transition: all 1s .3s $ease;
 
-                @include mq(lg){
+                @include mq(lg) {
                     top: -30px;
                 }
-                @include mq(xl){
+
+                @include mq(xl) {
                     top: -70px;
                 }
             }
@@ -77,15 +81,22 @@
                 padding-top: 15px;
 
                 & span {
+                    display: block;
                     position: static;
                     opacity: 1;
                     @extend .font-md;
+                    transition: all .5s .4s $ease;
+                    transform: translateX(-100%);
+
                 }
 
                 & h3 {
                     @extend .font-xl;
                     line-height: 1;
                     @extend .mb-md;
+                    transition: all .5s .5s $ease;
+                    transform: translateY(105%);
+
                 }
             }
         }
@@ -108,11 +119,15 @@
             }
 
             &__inner {
+                opacity: 0;
                 @extend .mb-md;
+                transform: translateX(20px);
+                transition: all .5s;
 
                 @include mq(md) {
                     flex: 1;
                 }
+
                 @include mq(xl) {
                     max-width: 250px;
                 }

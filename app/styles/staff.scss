@@ -1,0 +1,28 @@
+@use "app/styles/common.module.scss" as *;
+
+.active {
+    & .enName {
+        opacity: .1;
+    }
+
+    & .name__container {
+        & span {
+            transform: translateX(0);
+        }
+
+        & h3 {
+            transform: translateY(0);
+        }
+    }
+
+    & .text__inner {
+
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}){
+                opacity: 1;
+                transform: translateX(0);
+                transition-delay: .11s * $i;
+            }
+        }
+    }
+}
