@@ -36,6 +36,7 @@
         max-width: 450px;
         margin: 0 auto 50px;
 
+
         @include mq(lg) {
             flex: 1;
         }
@@ -160,6 +161,9 @@
             aspect-ratio: 1 / 1;
             max-height: 450px;
 
+            & img{
+                object-position: 0px 10px;
+            }
         }
     }
 }
